@@ -41,3 +41,22 @@ take care of CORS (along with proper configuration):
 
 create tests, then run:
 >>> py manage.py test
+
+
+install nvm: https://github.com/coreybutler/nvm-windows
+
+check node version to target: https://nodejs.org/download/release/index.json
+
+>>> nvm list
+>>> nvm install 16.3.0
+>>> nvm use 16.3.0
+>>> node -v
+        v16.3.0
+
+install react:
+
+>>> npx create-react-app frontend
+
+go to frontend folder, and run:
+
+>>> npm start
