@@ -1,0 +1,43 @@
+init git at main folder
+
+create environment at /backend
+>>> pipenv install django
+>>> pipenv shell
+>>> django-admin startproject config .
+
+change interpreter (backend-........)
+
+create .gitignore for .vscode folder
+
+>>> py manage.py startapp todos
+>>> py manage.py migrate
+>>> py manage.py runserver
+
+update todos model
+
+>>> py manage.py makemigrations todos
+>>> py manage.py migrate
+
+create our superuser after hooking the model at admin.py
+
+>>> py manage.py createsuperuser
+>>> py manage.py runserver
+
+install drf
+
+>>> pipenv install djangorestframework
+
+config/settings.py
+
+# only for development purposes
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ]
+}
+
+take care of CORS (along with proper configuration):
+>>> pipenv install django-cors-headers
+
+create tests, then run:
+>>> py manage.py test
